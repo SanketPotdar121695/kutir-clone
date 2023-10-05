@@ -1,1 +1,1 @@
-This is the very beginning of our project.
+- Deployed Link: <a href="https://kutir-digital-fashion-store.netlify.app/">https://kutir-digital-fashion-store.netlify.app/</a>
