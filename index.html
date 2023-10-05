@@ -8,80 +8,28 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./Styles/custom.css" />
     <title>Kutir: Digital Fashion Mall</title>
   </head>
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-  </style>
-
   <body>
-    <!-- Navigation bar starts -->
     <header>
-      <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-3">
-        <div class="container-fluid border border-primary">
-          <a class="navbar-brand" href="#">Kutir</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto border-red">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex border my-auto" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
-          </div>
-        </div>
-      </nav>
+      <!-- Navigation bar starts -->
+      <div id="nav_container"></div>
+      <!-- Navigation bar ends -->
     </header>
-    <!-- Navigation bar ends -->
+
+    <main>
+      <!-- Carousel starts -->
+      <div id="carousel_container"></div>
+      <!-- Carousel ends -->
+
+      <!-- Card1 starts -->
+      <div id="card1" class="container-fluid my-3">
+        <h2 class="h2 text-center text-decoration-underline">New Arrivals</h2>
+      </div>
+      <!-- Card1 ends -->
+    </main>
   </body>
 
   <script
@@ -90,10 +38,14 @@
     crossorigin="anonymous"
   ></script>
 
-  <!-- <script type="module">
+  <script type="module">
     import navbar from './Components/navbar.js';
+    import carousel from './Components/carousel.js';
 
     let nav_container = document.getElementById('nav_container');
+    let carousel_container = document.getElementById('carousel_container');
+
     nav_container.innerHTML = navbar();
-  </script> -->
+    carousel_container.innerHTML = carousel();
+  </script>
 </html>

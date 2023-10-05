@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav1_customBtn {
+  font-size: smaller;
+}
+
+.nav1_customBg {
+  background-color: #688d2d;
+}
+
+.nav2_customImg {
+  width: 5%;
+  vertical-align: middle;
+}
+
+@media all and (max-width: 620px) {
+  .nav1_custom {
+    font-size: 3.5vw;
+  }
+
+  .nav2_customImg {
+    width: 10%;
+  }
+}
