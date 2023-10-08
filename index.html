@@ -8,12 +8,20 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/footers/"
+    />
     <link rel="stylesheet" href="./Styles/custom.css" />
     <title>Kutir: Digital Fashion Mall</title>
   </head>
 
   <body>
-    <header>
+    <header class="sticky-top">
       <!-- Navigation bar starts -->
       <div id="nav_container"></div>
       <!-- Navigation bar ends -->
@@ -21,15 +29,25 @@
 
     <main>
       <!-- Carousel starts -->
-      <div id="carousel_container"></div>
+      <div id="carousel_container" class="container-fluid p-0 shadow"></div>
       <!-- Carousel ends -->
 
       <!-- Card1 starts -->
-      <div id="card1" class="container-fluid my-3">
-        <h2 class="h2 text-center text-decoration-underline">New Arrivals</h2>
-      </div>
+      <div id="card1" class="container my-3"></div>
       <!-- Card1 ends -->
+
+      <!-- Card2 starts -->
+      <div id="card2" class="container my-3"></div>
+      <!-- Card2 ends -->
+
+      <!-- Card3 starts -->
+      <div id="card3" class="container my-3"></div>
+      <!-- Card3 ends -->
     </main>
+
+    <footer class="w-100 shadow-lg">
+      <div id="footer" class="container py-5"></div>
+    </footer>
   </body>
 
   <script
@@ -40,12 +58,22 @@
 
   <script type="module">
     import navbar from './Components/navbar.js';
+    import footer from './Components/footer.js';
     import carousel from './Components/carousel.js';
+    import { card1, card2, card3 } from './Components/cards.js';
 
+    let card1_container = document.getElementById('card1');
+    let card2_container = document.getElementById('card2');
+    let card3_container = document.getElementById('card3');
+    let footer_container = document.getElementById('footer');
     let nav_container = document.getElementById('nav_container');
     let carousel_container = document.getElementById('carousel_container');
 
     nav_container.innerHTML = navbar();
+    card1_container.innerHTML = card1();
+    card2_container.innerHTML = card2();
+    card3_container.innerHTML = card3();
+    footer_container.innerHTML = footer();
     carousel_container.innerHTML = carousel();
   </script>
 </html>
